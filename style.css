@@ -133,30 +133,30 @@ body {
   transform: scale(1.05); /* Збільшення при натисканні */
 }
 .card {
-    display: none;
-    width: 600px; /* Ще більша ширина картки */
-    height: 600px; /* Висота картки */
-    padding: 20px; /* Збільшені відступи всередині картки */
-    background-color: #ffffff;
-    border: 3px solid #ccc; /* Товстіший контур */
-    border-radius: 16px; /* Краї з більшим радіусом */
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); /* Тінь з більшими параметрами */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left; /* Вирівнювання тексту по лівій стороні */
-    opacity: 0; /* Початкова невидимість */
-    animation: cardAppear 0.5s forwards; /* Анімація появи */
-    overflow-y: auto; /* Додає прокрутку, якщо текст виходить за межі картки */
+  display: none;
+  width: 600px; /* Ще більша ширина картки */
+  height: 600px; /* Висота картки */
+  padding: 20px; /* Збільшені відступи всередині картки */
+  background-color: #ffffff;
+  border: 3px solid #ccc; /* Товстіший контур */
+  border-radius: 16px; /* Краї з більшим радіусом */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); /* Тінь з більшими параметрами */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left; /* Вирівнювання тексту по лівій стороні */
+  opacity: 0; /* Початкова невидимість */
+  animation: cardAppear 0.5s forwards; /* Анімація появи */
+  overflow-y: auto; /* Додає прокрутку, якщо текст виходить за межі картки */
 }
-  .card-image {
-    width: 255px;
-    height: 255px;
-    object-fit: cover;
-    display: block;
-    margin: 5px auto 0;
-}  
+.card-image {
+  width: 255px;
+  height: 255px;
+  object-fit: cover;
+  display: block;
+  margin: 5px auto 0;
+}
 @keyframes cardAppear {
   0% {
     opacity: 0;
@@ -172,4 +172,21 @@ body {
   padding: 5px 10px;
   display: block;
   margin: 20px auto 0;
+}
+
+/* Мобільна версія */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .card-image {
+    width: 80px;
+    height: 80px;
+  }
 }
